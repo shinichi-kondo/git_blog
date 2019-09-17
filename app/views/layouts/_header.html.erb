@@ -1,5 +1,5 @@
 <nav class="navbar navbar-default">
-      <div class="container-fluid">
+      <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navigation">
             <span class="icon-bar"></span>
@@ -19,6 +19,7 @@
             <%= link_to '新規作成', new_article_path %>
            <% else %>
             <%= link_to 'ユーザー登録', new_article_path %>
+            &nbsp;
             <%= link_to 'ログイン', new_article_path %>
            <% end %> 
             </p>
