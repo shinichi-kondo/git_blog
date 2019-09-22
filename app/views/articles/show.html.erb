@@ -1,6 +1,10 @@
 <div class="container">
   <div class="col-md-12 margin-top-5per article-box padding-top-15">
-    <%= image_tag 'Shinkansen.jpg', class: 'img-responsive' %>
+
+    <% if @article.image_id.present? %>
+      <%= image_tag attachment_url(@article, :image), class: 'article-image padding-top-15' %>
+    <% end %>
+    
       <h1><%= @article.title %></h1>
          <div class="padding-bottom-15" style="padding: 10px">
         <%= simple_format @article.body %>     

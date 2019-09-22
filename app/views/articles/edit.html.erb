@@ -1,10 +1,12 @@
 <div class="container">
      <div class="col-md-12 margin-top-5per article-box">
         <h1 class="text-center">ブログの編集</h1>
-
-        <%= image_tag 'Shinkansen.jpg', class: 'img-responsive  padding-top-15' %>
+  
           <div class="padding-bottom-15">
              <%= form_for @article do |f| %> 
+                <div class="form-group padding-top-15">
+                    <%= f.attachment_field :image %>
+                </div> 
               <div class="form-group">
                 <%= f.label :title, 'タイトル' %>
                   <%= f.text_field :title, class: 'form-control' %>
